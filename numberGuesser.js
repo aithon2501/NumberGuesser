@@ -3,6 +3,7 @@
   var userGuessButton = document.querySelector('#userGuessButton');
   var lastGuess = document.querySelector('.lastGuess');
   var outputText = document.querySelector('.outputText');
+  var randomNumber = Math.floor(Math.random() * 100 + 1); 
 
   userGuessButton.addEventListener ('click', function() {
     event.preventDefault();
@@ -13,9 +14,6 @@
   userGuess.addEventListener('keypress', clearDisable);
 
   document.querySelector('#userReset').addEventListener('click',resetGame)
-
- 
- var randomNumber = Math.floor(Math.random() * 100 + 1); 
 
 function compareGuess() {
   var userInput = parseInt(userGuess.value, 10);
@@ -38,13 +36,13 @@ function compareGuess() {
   }
 }
 
-  function getGuess() {
+function getGuess() {
     var displayGuess = userGuess.value;
     lastGuess.innerText = displayGuess;
     compareGuess();
   }
 
-  function resetGame () {
+function resetGame () {
     userGuess.value = "";
     lastGuess.innerText = "";
     outputText.innerText = "";
