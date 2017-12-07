@@ -9,18 +9,21 @@
   <header>
     <h1 class="titleNumber">Number<span class="titleGuesser">Guesser</span></h1>
   </header>
+  <article class="rangeText">Please choose the range of your guess</article>
+  <input type="number" class="inputMinMax" placeholder="Max" name="max">
+  <input type="number" class="inputMinMax" placeholder="Min" name="min">
   <form>
     <input type="number" minlength="0" maxlength="2" class="inputGuess" name="inputGuess" placeholder="Enter Your Guess">
-  <section class="buttons">
+  <article class="buttons">
     <button id="userGuessButton" type="submit">Guess</button>
     <button type="reset" disabled="true" id="userClearButton">Clear</button>
-  </section>
+  </article>
 </form>
-  </section>
+  </article>
   <main>
-    <section class="guessText">Your Last Guess Was</section>
-    <section class="lastGuess">??</section>
-    <section class="outputText"><wbr></section>
+    <article class="guessText">Your Last Guess Was</article>
+    <article class="lastGuess">??<article>
+    <article class="outputText">How was your guess?</article>
   </main>
   <button id="userReset" disabled="true">Reset</button>
 <script src="numberGuesser.js"></script>
